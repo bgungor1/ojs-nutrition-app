@@ -1,4 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import type { RootState } from './index'
 
 interface CartItem {
     id: string,
@@ -61,10 +62,10 @@ export const { addItem, removeItem, clearCart, updateQuantity, setCartFromApi } 
 export default cartSlice.reducer
 
 
-export const selectCartItems = (state: { cart: CartState }) => state.cart.items
-export const selectTotalItems = (state: { cart: CartState }) =>
+export const selectCartItems = (state: RootState) => state.cart.items
+export const selectTotalItems = (state: RootState) =>
     state.cart.items.reduce((total, item) => total + item.quantity, 0)
 
 
-export const selectTotalPrice = (state: { cart: CartState }) =>
+export const selectTotalPrice = (state: RootState) =>
     state.cart.items.reduce((total, item) => total + item.price * item.quantity, 0)
