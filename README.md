@@ -5,7 +5,7 @@
 <h1 align="center">OJS Nutrition</h1>
 
 <p align="center">
-  <b>Beslenme takibi ve sağlıklı yaşam için mobil uygulama</b>
+  <b>Bu proje, supplement (besin takviyesi) odaklı bir e-ticaret mobil uygulamasıdır. Kullanıcılar ürünleri inceleyebilir, filtreleyebilir, yorum yapabilir, sepetlerine ekleyebilir ve hesap bilgilerini yönetebilir.</b>
 </p>
 
 <p align="center">
