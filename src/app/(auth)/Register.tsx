@@ -2,12 +2,13 @@ import AuthButton from '@/components/auth/AuthButton';
 import AuthCheckbox from '@/components/auth/AuthCheckbox';
 import AuthInput from '@/components/auth/AuthInput';
 import AuthTabSwitcher from '@/components/auth/AuthTabSwitcher';
+import OjsLogo from '@/components/icons/OjsLogo';
 import { registerSchema, type RegisterFormData } from '@/schemas/auth';
 import { useRegisterMutation } from '@/services/authApi';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'expo-router';
 import { useForm } from 'react-hook-form';
-import { Alert, Image, KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 export default function RegisterScreen() {
     const router = useRouter();
@@ -50,11 +51,7 @@ export default function RegisterScreen() {
                     keyboardShouldPersistTaps="handled"
                 >
                     <View className="items-center mb-2">
-                        <Image
-                            source={require('@/assets/images/LOGO_Siyah.png')}
-                            className="w-32 h-32"
-                            resizeMode="contain"
-                        />
+                        <OjsLogo width={128} height={128} />
                     </View>
                     <Text className="text-3xl font-bold text-center mb-6">
                         Üye Ol
