@@ -54,8 +54,8 @@ export default function LoginScreen() {
                 >
                     <View className="items-center mb-2">
                         <Image
-                            source={require('@/assets/images/icon.png')}
-                            className="w-24 h-24"
+                            source={require('@/assets/images/LOGO_Siyah.png')}
+                            className="w-32 h-32"
                             resizeMode="contain"
                         />
                     </View>
