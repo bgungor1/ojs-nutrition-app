@@ -1,13 +1,12 @@
 import DiscountBadge from '@/components/common/DiscountBadge';
 import StarRating from '@/components/common/StarRating';
-import type { ApiBestSellerProduct } from '@/types/api';
+import type { ApiBestSellerProduct, ApiProduct } from '@/types/api';
 import { getImageUrl } from '@/utils/imageUrl';
 import { Image } from 'expo-image';
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
-
 interface ProductCardProps {
-    product: ApiBestSellerProduct;
+    product: ApiBestSellerProduct | ApiProduct;
     onPress?: () => void;
 }
 
@@ -19,8 +18,8 @@ const ProductCard = ({ product, onPress }: ProductCardProps) => {
         <TouchableOpacity
             activeOpacity={0.8}
             onPress={onPress}
-            className="flex-1 bg-white rounded-xl overflow-hidden mx-1.5 mb-3 shadow-sm"
-            style={{ elevation: 2 }}
+            className="bg-white rounded-xl overflow-hidden mx-1.5 mb-3 shadow-sm"
+            style={{ elevation: 2, height: 252 }}
         >
             <View className="relative">
                 {hasDiscount && (
