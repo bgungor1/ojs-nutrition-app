@@ -5,11 +5,10 @@ import OjsLogo from '@/components/icons/OjsLogo';
 import { loginSchema, type LoginFormData } from '@/schemas/auth';
 import { useLoginMutation } from '@/services/authApi';
 import type { AppDispatch } from '@/store';
-import { setAuth } from '@/store/authSlice';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'expo-router';
 import { useForm } from 'react-hook-form';
-import { Alert, KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDispatch } from 'react-redux';
 
@@ -25,6 +24,12 @@ export default function LoginScreen() {
             password: '',
         },
     });
+    // TODO: Geçici bypass — tasarımı görmek için direkt ana ekrana yönlendirir
+    const onSubmit = async (_data: LoginFormData) => {
+        router.replace('/(tabs)');
+    };
+
+    /* ---- Orijinal login mantığı (sonra geri açılacak) ----
     const onSubmit = async (data: LoginFormData) => {
         try {
             const result = await login({
@@ -37,12 +42,12 @@ export default function LoginScreen() {
                 refreshToken: result.data.refresh,
             }));
             router.replace('/(tabs)');
-
         } catch (error: any) {
             console.error('Login error:', error);
             Alert.alert("Login error:", error.message)
         }
     };
+    ---- */
     return (
         <SafeAreaView className="flex-1 bg-white">
             <KeyboardAvoidingView
