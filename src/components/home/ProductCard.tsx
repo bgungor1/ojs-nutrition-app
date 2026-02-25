@@ -1,6 +1,7 @@
 import DiscountBadge from '@/components/common/DiscountBadge';
 import StarRating from '@/components/common/StarRating';
 import type { ApiBestSellerProduct } from '@/types/api';
+import { getImageUrl } from '@/utils/imageUrl';
 import { Image } from 'expo-image';
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
@@ -26,10 +27,11 @@ const ProductCard = ({ product, onPress }: ProductCardProps) => {
                     <DiscountBadge percentage={product.price_info.discount_percentage!} />
                 )}
                 <Image
-                    source={{ uri: product.photo_src }}
+                    source={{ uri: getImageUrl(product.photo_src) }}
                     style={{ width: '100%', height: 140 }}
                     contentFit="contain"
                     className="bg-gray-50"
+                    transition={300}
                 />
             </View>
             <View className="px-2.5 py-2">

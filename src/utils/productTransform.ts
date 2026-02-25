@@ -1,6 +1,7 @@
 import type { ApiProductDetail } from '@/types/api'
 import type { FlavorOption, ProductDetail, SizeOption } from '@/types/product'
 import type { ProductVariant } from '../hooks/useProductVariants'
+import { getImageUrl } from './imageUrl'
 
 export const transformApiProductToProductDetail = (apiProduct: ApiProductDetail): ProductDetail => {
     const uniqueAromas = [...new Set(apiProduct.variants.map(v => v.aroma))]
@@ -33,7 +34,7 @@ export const transformApiProductToProductDetail = (apiProduct: ApiProductDetail)
     return {
         id: parseInt(apiProduct.id),
         name: apiProduct.name,
-        image: apiProduct.variants[0]?.photo_src ? `https://fe1111.projects.academy.onlyjs.com${apiProduct.variants[0].photo_src}` : '/src/assets/whey-protein.jpg',
+        image: getImageUrl(apiProduct.variants[0]?.photo_src),
         description: apiProduct.explanation.description,
         shortDescription: apiProduct.short_explanation,
         reviewCount: apiProduct.comment_count,
@@ -80,7 +81,7 @@ export const transformApiProductToProductDetail = (apiProduct: ApiProductDetail)
         },
         usageInstructions: apiProduct.explanation.usage,
         ingredients: apiProduct.explanation.nutritional_content.ingredients.map(ing => ing.value),
-        images: apiProduct.variants.map(v => v.photo_src ? `https://fe1111.projects.academy.onlyjs.com${v.photo_src}` : '/src/assets/whey-protein.jpg')
+        images: apiProduct.variants.map(v => getImageUrl(v.photo_src))
     }
 }
 
@@ -120,6 +121,6 @@ export const transformApiVariantsToProductVariants = (apiProduct: ApiProductDeta
         originalPrice: variant.price.discounted_price || undefined,
         discountPercentage: variant.price.discount_percentage || undefined,
         isAvailable: variant.is_available,
-        image: variant.photo_src ? `https://fe1111.projects.academy.onlyjs.com${variant.photo_src}` : undefined
+        image: getImageUrl(variant.photo_src) || undefined
     }))
 }
