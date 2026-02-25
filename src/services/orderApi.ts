@@ -37,3 +37,11 @@ export const orderApi = baseApi.injectEndpoints({
 
     })
 })
+
+export const {
+    useGetOrdersQuery,
+    useGetOrderDetailsQuery,
+    useGetPaymentSettingsQuery,
+    useGetShipmentFeeQuery,
+    useCompleteShoppingMutation
+} = orderApi
