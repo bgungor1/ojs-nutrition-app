@@ -3,9 +3,9 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 export interface ReviewDistribution {
-    rating: number; // 1-5
+    rating: number;
     count: number;
-    percentage: number; // 0-100
+    percentage: number;
 }
 
 interface ReviewOverviewProps {
@@ -14,14 +14,8 @@ interface ReviewOverviewProps {
     distribution: ReviewDistribution[];
 }
 
-/**
- * Ürün Değerlendirme Grafiği Alanı
- * 
- * Toplam yıldız ortalamasını ve her yıldızın (5, 4, 3, 2, 1) oransal 
- * dağılımını gösterir. Sayfanın yorumlar kısmının başında yer alır.
- */
+
 export function ReviewOverview({ averageRating, totalReviews, distribution }: ReviewOverviewProps) {
-    // Tasarımdaki ilerleme çubukları
     const ProgressBar = ({ rating, percentage }: { rating: number, percentage: number }) => (
         <View className="flex-row items-center mb-1.5 w-full">
             <Text className="text-xs text-gray-500 w-4">{rating}</Text>
@@ -35,7 +29,6 @@ export function ReviewOverview({ averageRating, totalReviews, distribution }: Re
         </View>
     );
 
-    // En yüksek puandan (5) en düşüğe (1) sıralama (garantiye alıyoruz)
     const sortedDistribution = [...distribution].sort((a, b) => b.rating - a.rating);
 
     return (

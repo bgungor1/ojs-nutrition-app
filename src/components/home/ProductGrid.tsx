@@ -1,4 +1,5 @@
 import { useGetBestSellersQuery } from '@/services/bestSellersApi';
+import { router } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, Text, View } from 'react-native';
 import ProductCard from './ProductCard';
@@ -31,7 +32,7 @@ const ProductGrid = () => {
                     <View key={product.slug || index} className="w-1/2">
                         <ProductCard
                             product={product}
-                            onPress={() => { }}
+                            onPress={() => { router.push(`/product/${product.slug}`) }}
                         />
                     </View>
                 ))}

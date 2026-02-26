@@ -1,5 +1,6 @@
 import ProductCard from '@/components/home/ProductCard';
 import { useGetProductsQuery } from '@/services/productsApi';
+import { router } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, FlatList, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -42,7 +43,7 @@ export default function AllProductsScreen() {
                         <ProductCard
                             product={item}
                             onPress={() => {
-                                // router.push(`/product/${item.slug}`)
+                                router.push(`/product/${item.slug}`)
                             }}
                         />
                     </View>

@@ -1,4 +1,5 @@
 import SearchBar from '@/components/home/SearchBar';
+import { ProductHeader } from '@/components/product/ProductHeader';
 import { useProductSearch } from '@/hooks/useProductSearch';
 import type { ApiProduct } from '@/types/api';
 import { getImageUrl } from '@/utils/imageUrl';
@@ -91,6 +92,7 @@ export default function ExploreScreen() {
 
   return (
     <SafeAreaView className="flex-1 bg-white" edges={['top']}>
+      <ProductHeader />
       <SearchBar
         value={searchQuery}
         onChangeText={setSearchQuery}
