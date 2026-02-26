@@ -214,3 +214,23 @@ export interface WooCommerceProduct {
     menu_order: number;
     meta_data: WooCommerceProductMetaData[];
 }
+
+export interface ApiComment {
+    stars: string;
+    comment: string;
+    title: string;
+    created_at: string;
+    aroma: string;
+    first_name: string;
+    last_name: string;
+}
+
+export interface ApiProductCommentsResponse {
+    status: "success" | "error";
+    data: {
+        count: number;
+        next: string | null;
+        previous: string | null;
+        results: ApiComment[];
+    }
+}
