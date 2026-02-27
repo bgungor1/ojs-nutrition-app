@@ -28,7 +28,7 @@ export interface AddToCartRequest {
 
 
 export interface RemoveFromCartRequest {
-    product_id: number
+    product_id: string
     product_variant_id: string
     pieces: number
 }

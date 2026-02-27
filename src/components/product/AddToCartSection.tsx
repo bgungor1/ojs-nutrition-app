@@ -1,15 +1,16 @@
 import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 
 interface AddToCartSectionProps {
     onAddToCart: (quantity: number) => void;
     price: number;
     inStock: boolean;
+    isLoading?: boolean;
 }
 
 
-export function AddToCartSection({ onAddToCart, price, inStock }: AddToCartSectionProps) {
+export function AddToCartSection({ onAddToCart, price, inStock, isLoading }: AddToCartSectionProps) {
     const [quantity, setQuantity] = useState(1);
 
     const increase = () => setQuantity(prev => prev + 1);
@@ -36,15 +37,21 @@ export function AddToCartSection({ onAddToCart, price, inStock }: AddToCartSecti
                 </Pressable>
             </View>
             <Pressable
-                onPress={() => inStock && onAddToCart(quantity)}
-                disabled={!inStock}
+                onPress={() => inStock && !isLoading && onAddToCart(quantity)}
+                disabled={!inStock || isLoading}
                 className={`flex-1 ml-3 h-14 rounded-xl flex-row items-center justify-center ${inStock ? "bg-black" : "bg-gray-300"
                     }`}
             >
-                <Ionicons name="cart-outline" size={22} color="white" style={{ marginRight: 8 }} />
-                <Text className="text-white font-bold text-base">
-                    {inStock ? `Sepete Ekle • ${price * quantity} TL` : 'Stokta Yok'}
-                </Text>
+                {isLoading ? (
+                    <ActivityIndicator color="white" />
+                ) : (
+                    <>
+                        <Ionicons name="cart-outline" size={22} color="white" style={{ marginRight: 8 }} />
+                        <Text className="text-white font-bold text-base">
+                            {inStock ? `Sepete Ekle • ${price * quantity} TL` : 'Stokta Yok'}
+                        </Text>
+                    </>
+                )}
             </Pressable>
         </View>
     );
