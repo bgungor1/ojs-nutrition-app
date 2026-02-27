@@ -24,11 +24,9 @@ export interface RegisterRequest {
 }
 
 export interface LoginSuccessResponse {
-    status: "success"
-    data: {
-        access: string
-        refresh: string
-    }
+    access_token: string;
+    refresh_token: string;
+    user?: User;
 }
 
 export interface RegisterSuccessResponse {
