@@ -21,8 +21,12 @@ import { ReviewList } from '@/components/product/ReviewList';
 import { ReviewDistribution, ReviewOverview } from '@/components/product/ReviewOverview';
 
 // Types and Services
+import { useAddToCartMutation } from '@/services/cartApi';
 import { useGetProductBySlugQuery, useGetProductCommentsQuery, useGetProductsQuery } from '@/services/productsApi';
+import { addItem } from '@/store/cartSlice';
 import { ApiComment, ApiProduct } from '@/types/api';
+import Toast from 'react-native-toast-message';
+import { useDispatch } from 'react-redux';
 
 export default function ProductDetailScreen() {
     const { slug } = useLocalSearchParams<{ slug: string }>();
@@ -37,6 +41,8 @@ export default function ProductDetailScreen() {
     const { data: relatedProductsData } = useGetProductsQuery({ limit: 4 }, { skip: !slug });
     const product = productData?.data;
     const [selectedVariantId, setSelectedVariantId] = React.useState<string | null>(null);
+    const [addToCart, { isLoading: isAddingToCart }] = useAddToCartMutation();
+    const dispatch = useDispatch();
 
     React.useEffect(() => {
         if (product?.variants?.length && !selectedVariantId) {
@@ -74,6 +80,47 @@ export default function ProductDetailScreen() {
 
     const handleSizeChange = (variantId: string) => {
         setSelectedVariantId(variantId);
+    };
+
+    const handleAddToCart = async (quantity: number) => {
+        if (!product || !selectedVariantId) return;
+
+        try {
+            await addToCart({
+                product_id: product.id.toString(),
+                product_variant_id: selectedVariantId,
+                pieces: quantity
+            }).unwrap();
+
+            dispatch(addItem({
+                id: `${product.id}-${selectedVariantId}`,
+                product_id: Number(product.id),
+                product_variant_id: selectedVariantId,
+                name: product.name,
+                price: currentPrice,
+                quantity: quantity,
+                image: selectedVariant ? selectedVariant.photo_src : '',
+                flavor: currentAroma,
+                size: mappedSizes.find(s => s.id === selectedVariantId)?.name
+            }));
+
+            Toast.show({
+                type: 'success',
+                text1: 'Başarılı',
+                text2: 'Ürün sepetinize eklendi 🛒',
+                position: 'top',
+                visibilityTime: 3000,
+            });
+        } catch (error) {
+            console.error('Sepete ekleme hatası:', error);
+            Toast.show({
+                type: 'error',
+                text1: 'Hata',
+                text2: 'Ürün sepete eklenirken bir sorun oluştu.',
+                position: 'top',
+                visibilityTime: 3000,
+            });
+        }
     };
 
     const currentPrice = selectedVariant ? (selectedVariant.price.discounted_price ?? selectedVariant.price.total_price) : 0;
@@ -165,8 +212,9 @@ export default function ProductDetailScreen() {
             <View className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 shadow-md elevation-10">
                 <AddToCartSection
                     price={currentPrice}
-                    onAddToCart={(qty) => console.log('Sepete Ekleniyor:', { product: product.id, quantity: qty, selectedVariantId })}
+                    onAddToCart={handleAddToCart}
                     inStock={availability === 'in_stock'}
+                    isLoading={isAddingToCart}
                 />
             </View>
         </SafeAreaView>
