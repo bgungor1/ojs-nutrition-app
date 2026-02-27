@@ -41,7 +41,7 @@ export default function MenuScreen() {
                 <MenuItem
                     iconName="headset-outline"
                     title="Bize Ulaşın"
-                    onPress={() => console.log('Bize Ulaşın')}
+                    onPress={() => router.push('/contact' as any)}
                 />
                 <MenuItem
                     iconName="help-outline"
