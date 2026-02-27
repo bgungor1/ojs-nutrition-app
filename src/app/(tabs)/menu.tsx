@@ -21,7 +21,7 @@ export default function MenuScreen() {
                 <MenuItem
                     iconName="person-outline"
                     title="Hesap Bilgilerim"
-                    onPress={() => console.log('Hesap Bilgilerim')}
+                    onPress={() => router.push('/account' as any)}
                 />
                 <MenuItem
                     iconName="cube-outline"
