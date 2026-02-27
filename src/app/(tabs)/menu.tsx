@@ -36,7 +36,7 @@ export default function MenuScreen() {
                 <MenuItem
                     iconName="information-circle-outline"
                     title="Hakkımızda"
-                    onPress={() => console.log('Hakkımızda')}
+                    onPress={() => router.push('/about' as any)}
                 />
                 <MenuItem
                     iconName="headset-outline"
