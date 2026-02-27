@@ -31,12 +31,17 @@ export default function MenuScreen() {
                 <MenuItem
                     iconName="location-outline"
                     title="Adresim"
-                    onPress={() => console.log('Adresim')}
+                    onPress={() => router.push('/address' as any)}
                 />
                 <MenuItem
                     iconName="information-circle-outline"
                     title="Hakkımızda"
                     onPress={() => router.push('/about' as any)}
+                />
+                <MenuItem
+                    iconName="location-outline"
+                    title="Adreslerim"
+                    onPress={() => router.push('/address' as any)}
                 />
                 <MenuItem
                     iconName="headset-outline"
