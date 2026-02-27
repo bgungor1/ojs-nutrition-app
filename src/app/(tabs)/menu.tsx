@@ -26,7 +26,7 @@ export default function MenuScreen() {
                 <MenuItem
                     iconName="cube-outline"
                     title="Siparişlerim"
-                    onPress={() => console.log('Siparişlerim')}
+                    onPress={() => router.push('/orders' as any)}
                 />
                 <MenuItem
                     iconName="location-outline"

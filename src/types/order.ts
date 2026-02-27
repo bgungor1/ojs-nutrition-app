@@ -1,4 +1,18 @@
+export interface OrderTracking {
+    company: string;
+    tracking_number: string;
+}
+
+export interface OrderPriceSummary {
+    subtotal: number;
+    shipping: number;
+    tax: number;
+    discount: number;
+    total: number;
+}
+
 export interface Order {
+    id?: string;
     order_no: string
     order_status: OrderStatus
     created_at: string
@@ -6,9 +20,9 @@ export interface Order {
     shipping_fee?: number
     cart_detail?: OrderItem[]
     address?: OrderAddress
-}
-
-export type OrderStatus =
+    shipping_info?: OrderTracking;
+    price_summary?: OrderPriceSummary;
+}export type OrderStatus =
     | "pending"
     | "processing"
     | "shipped"
