@@ -4,7 +4,7 @@ import { CartItemCard } from '@/components/cart/CartItemCard';
 import { CartSummaryFooter } from '@/components/cart/CartSummaryFooter';
 import { useAddToCartMutation, useGetCartQuery, useRemoveCartMutation } from '@/services/cartApi';
 import { removeItem, selectCartItems, selectTotalPrice, updateQuantity } from '@/store/cartSlice';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import React from 'react';
 import { FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -12,6 +12,7 @@ import Toast from 'react-native-toast-message';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function CartScreen() {
+    const router = useRouter();
     const cartItems = useSelector(selectCartItems);
     const totalPrice = useSelector(selectTotalPrice);
     const dispatch = useDispatch();
@@ -100,7 +101,7 @@ export default function CartScreen() {
             <CartSummaryFooter
                 totalPrice={totalPrice}
                 isEmpty={isEmpty}
-                onCheckout={() => console.log('Checkout tıklandı')}
+                onCheckout={() => router.push('/checkout' as any)}
             />
         </SafeAreaView>
     );
