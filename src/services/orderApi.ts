@@ -1,11 +1,4 @@
-import type {
-    CompleteShoppingRequest,
-    CompleteShoppingResponse,
-    OrderDetailResponse,
-    OrderListResponse,
-    PaymentSettingsResponse,
-    ShipmentFeeResponse
-} from '@/types/order'
+import { type CompleteShoppingRequest, type CompleteShoppingResponse, type OrderDetailResponse, type OrderListResponse, type PaymentSettingsResponse, type ShipmentFeeResponse } from '@/types';
 import { baseApi } from './baseApi'
 
 export const orderApi = baseApi.injectEndpoints({

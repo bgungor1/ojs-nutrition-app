@@ -1,9 +1,4 @@
-import {
-    type LoginRequest,
-    type LoginSuccessResponse,
-    type RegisterRequest,
-    type RegisterSuccessResponse
-} from '@/types/auth';
+import { type LoginRequest, type LoginSuccessResponse, type RegisterRequest, type RegisterSuccessResponse } from '@/types';
 import { baseApi } from "./baseApi";
 
 const AUTH_API_KEY = process.env.EXPO_PUBLIC_AUTH_API_KEY || ''

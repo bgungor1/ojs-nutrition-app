@@ -1,4 +1,4 @@
-import StarRating from '@/components/common/StarRating';
+import { StarRating } from '@/components/common';
 import React from 'react';
 import { Text, View } from 'react-native';
 

@@ -1,4 +1,4 @@
-import { OrderPriceSummary } from '@/types/order';
+import { OrderPriceSummary } from '@/types';
 import React from 'react';
 import { Text, View } from 'react-native';
 

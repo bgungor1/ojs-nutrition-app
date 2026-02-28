@@ -1,5 +1,5 @@
-import ProductCard from '@/components/home/ProductCard';
-import { useGetProductsQuery } from '@/services/productsApi';
+import { useGetProductsQuery } from '@/services';
+import { ProductCard } from '@/components/home';
 import { router } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, FlatList, Text, View } from 'react-native';

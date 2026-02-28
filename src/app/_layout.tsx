@@ -1,3 +1,4 @@
+import { useColorScheme } from '@/hooks';
 import '@/global.css';
 import { persistor, store } from '@/store';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
@@ -10,7 +11,6 @@ import Toast from 'react-native-toast-message';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
 
 export const unstable_settings = {
   anchor: '(tabs)',

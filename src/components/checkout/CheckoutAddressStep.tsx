@@ -1,5 +1,5 @@
-import { CheckoutInlineAddressForm } from '@/components/checkout/CheckoutInlineAddressForm';
-import { Address } from '@/types/address';
+import { CheckoutInlineAddressForm } from '@/components/checkout';
+import { Address } from '@/types';
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 

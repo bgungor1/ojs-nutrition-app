@@ -1,7 +1,6 @@
-import { AccountInput } from '@/components/account/AccountInput';
-import { AddressHeader } from '@/components/address/AddressHeader';
-import { AddressSelect } from '@/components/address/AddressSelect';
-import { useAddressForm } from '@/hooks/useAddressForm';
+import { AccountInput } from '@/components/account';
+import { AddressHeader, AddressSelect } from '@/components/address';
+import { useAddressForm } from '@/hooks';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, Text, View } from 'react-native';

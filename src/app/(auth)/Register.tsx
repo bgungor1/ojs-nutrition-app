@@ -1,10 +1,7 @@
-import AuthButton from '@/components/auth/AuthButton';
-import AuthCheckbox from '@/components/auth/AuthCheckbox';
-import AuthInput from '@/components/auth/AuthInput';
-import AuthTabSwitcher from '@/components/auth/AuthTabSwitcher';
-import OjsLogo from '@/components/icons/OjsLogo';
+import { useRegisterMutation } from '@/services';
+import { AuthButton, AuthCheckbox, AuthInput, AuthTabSwitcher } from '@/components/auth';
+import { OjsLogo } from '@/components/icons';
 import { registerSchema, type RegisterFormData } from '@/schemas/auth';
-import { useRegisterMutation } from '@/services/authApi';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'expo-router';
 import { useForm } from 'react-hook-form';

@@ -1,4 +1,4 @@
-import { FlavorOption, SizeOption } from '@/types/product';
+import { FlavorOption, SizeOption } from '@/types';
 import { clsx } from 'clsx';
 import React from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';

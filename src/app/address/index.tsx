@@ -1,5 +1,5 @@
-import { AddressHeader } from '@/components/address/AddressHeader';
-import { useGetAddressesQuery } from '@/services/addressApi';
+import { AddressHeader } from '@/components/address';
+import { useGetAddressesQuery } from '@/services';
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useRouter } from 'expo-router';
 import React from 'react';

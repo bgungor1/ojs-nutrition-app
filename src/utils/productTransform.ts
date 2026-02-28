@@ -1,5 +1,4 @@
-import type { ApiProductDetail } from '@/types/api'
-import type { FlavorOption, ProductDetail, SizeOption } from '@/types/product'
+import { type ApiProductDetail, type FlavorOption, type ProductDetail, type SizeOption } from '@/types';
 import type { ProductVariant } from '../hooks/useProductVariants'
 import { getImageUrl } from './imageUrl'
 

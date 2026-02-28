@@ -1,4 +1,4 @@
-import { ShipmentFee } from '@/types/order';
+import { ShipmentFee } from '@/types';
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 

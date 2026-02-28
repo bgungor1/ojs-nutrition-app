@@ -1,4 +1,4 @@
-import { Order } from '@/types/order';
+import { Order } from '@/types';
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 

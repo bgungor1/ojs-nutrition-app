@@ -1,5 +1,4 @@
-import { ContactForm } from '@/components/contact/ContactForm';
-import { ContactHeader } from '@/components/contact/ContactHeader';
+import { ContactForm, ContactHeader } from '@/components/contact';
 import { Stack } from 'expo-router';
 import React from 'react';
 import { ScrollView } from 'react-native';

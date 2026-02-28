@@ -1,4 +1,4 @@
-import { ContactInput } from '@/components/contact/ContactInput';
+import { ContactInput } from '@/components/contact';
 import { contactSchema, type ContactFormData } from '@/schemas/contact';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useState } from 'react';

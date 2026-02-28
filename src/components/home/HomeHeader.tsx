@@ -1,4 +1,4 @@
-import OjsLogo from '@/components/icons/OjsLogo';
+import { OjsLogo } from '@/components/icons';
 import { selectTotalItems } from '@/store/cartSlice';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useRouter } from 'expo-router';

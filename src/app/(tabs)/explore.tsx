@@ -1,7 +1,7 @@
-import SearchBar from '@/components/home/SearchBar';
-import { ProductHeader } from '@/components/product/ProductHeader';
-import { useProductSearch } from '@/hooks/useProductSearch';
-import type { ApiProduct } from '@/types/api';
+import { ProductHeader } from '@/components/product';
+import { useProductSearch } from '@/hooks';
+import { type ApiProduct } from '@/types';
+import { SearchBar } from '@/components/home';
 import { getImageUrl } from '@/utils/imageUrl';
 import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';

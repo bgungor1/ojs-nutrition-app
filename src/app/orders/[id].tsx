@@ -1,5 +1,4 @@
-import { OrderDetailItem } from '@/components/orders/OrderDetailItem';
-import { OrderSummaryBox } from '@/components/orders/OrderSummaryBox';
+import { OrderDetailItem, OrderSummaryBox } from '@/components/orders';
 import { mockOrders } from '@/data/orders';
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';

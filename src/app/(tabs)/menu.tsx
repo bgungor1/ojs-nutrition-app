@@ -1,4 +1,4 @@
-import { MenuItem } from '@/components/menu/MenuItem';
+import { MenuItem } from '@/components/menu';
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';

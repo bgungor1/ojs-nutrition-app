@@ -1,8 +1,5 @@
-import { AboutCertificates } from '@/components/about/AboutCertificates';
-import { AboutContent } from '@/components/about/AboutContent';
-import { AboutHeader } from '@/components/about/AboutHeader';
-import { ReviewList } from '@/components/product/ReviewList';
-import { ReviewOverview } from '@/components/product/ReviewOverview';
+import { AboutCertificates, AboutContent, AboutHeader } from '@/components/about';
+import { ReviewList, ReviewOverview } from '@/components/product';
 import { aboutPageDistribution, aboutPageReviews } from '@/data/mockReviews';
 import { Stack } from 'expo-router';
 import React from 'react';

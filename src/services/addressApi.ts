@@ -1,9 +1,4 @@
-import type {
-    Address,
-    AddressListResponse,
-    CreateAddressRequest,
-    UpdateAddressRequest
-} from '@/types/address';
+import { type Address, type AddressListResponse, type CreateAddressRequest, type UpdateAddressRequest } from '@/types';
 import { baseApi } from './baseApi';
 
 interface ApiWrapper<T> {

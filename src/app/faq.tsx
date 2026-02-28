@@ -1,6 +1,4 @@
-import { FaqAccordion, FaqItem } from '@/components/faq/FaqAccordion';
-import { FaqCategory, FaqCategoryTabs } from '@/components/faq/FaqCategoryTabs';
-import { FaqHeader } from '@/components/faq/FaqHeader';
+import { FaqAccordion, FaqCategory, FaqCategoryTabs, FaqHeader, FaqItem } from '@/components/faq';
 import { Stack } from 'expo-router';
 import React, { useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';

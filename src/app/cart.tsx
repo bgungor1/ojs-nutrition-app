@@ -1,8 +1,5 @@
-import { CartEmptyState } from '@/components/cart/CartEmptyState';
-import { CartHeader } from '@/components/cart/CartHeader';
-import { CartItemCard } from '@/components/cart/CartItemCard';
-import { CartSummaryFooter } from '@/components/cart/CartSummaryFooter';
-import { useAddToCartMutation, useGetCartQuery, useRemoveCartMutation } from '@/services/cartApi';
+import { CartEmptyState, CartHeader, CartItemCard, CartSummaryFooter } from '@/components/cart';
+import { useAddToCartMutation, useGetCartQuery, useRemoveCartMutation } from '@/services';
 import { removeItem, selectCartItems, selectTotalPrice, updateQuantity } from '@/store/cartSlice';
 import { Stack, useRouter } from 'expo-router';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { CheckoutFormValues, checkoutFormSchema } from '@/types/checkout';
+import { checkoutFormSchema, CheckoutFormValues } from '@/types';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';

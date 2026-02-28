@@ -1,10 +1,6 @@
-import { CheckoutAddressStep } from '@/components/checkout/CheckoutAddressStep';
-import { CheckoutPaymentStep } from '@/components/checkout/CheckoutPaymentStep';
-import { CheckoutShippingStep } from '@/components/checkout/CheckoutShippingStep';
-import { CheckoutSummaryDropdown } from '@/components/checkout/CheckoutSummaryDropdown';
-import { useCheckoutFlow } from '@/hooks/useCheckoutFlow';
-import { useGetAddressesQuery } from '@/services/addressApi';
-import { useGetShipmentFeeQuery } from '@/services/orderApi';
+import { CheckoutAddressStep, CheckoutPaymentStep, CheckoutShippingStep, CheckoutSummaryDropdown } from '@/components/checkout';
+import { useCheckoutFlow } from '@/hooks';
+import { useGetAddressesQuery, useGetShipmentFeeQuery } from '@/services';
 import { selectCartItems, selectTotalItems, selectTotalPrice } from '@/store/cartSlice';
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useRouter } from 'expo-router';

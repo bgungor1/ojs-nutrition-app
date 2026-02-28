@@ -1,3 +1,4 @@
+import { useCreateAddressMutation, useGetAddressByIdQuery, useGetCountriesQuery, useGetRegionsQuery, useGetSubregionsQuery, useUpdateAddressMutation } from '@/services';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'expo-router';
 import { useEffect } from 'react';
@@ -5,8 +6,6 @@ import { useForm } from 'react-hook-form';
 import Toast from 'react-native-toast-message';
 
 import { addressSchema, type AddressFormData } from '@/schemas/address';
-import { useCreateAddressMutation, useGetAddressByIdQuery, useUpdateAddressMutation } from '@/services/addressApi';
-import { useGetCountriesQuery, useGetRegionsQuery, useGetSubregionsQuery } from '@/services/worldApi';
 import { formatPhoneNumberForApi, stripPhonePrefix } from '@/utils/phoneUtils';
 
 export function useAddressForm(addressId?: string) {

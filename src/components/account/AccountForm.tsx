@@ -1,7 +1,6 @@
-import { AccountInput } from '@/components/account/AccountInput';
-import { MarketingConsentCheckbox } from '@/components/account/MarketingConsentCheckbox';
+import { AccountInput, MarketingConsentCheckbox } from '@/components/account';
+import { useGetMyAccountQuery, useUpdateProfileMutation } from '@/services';
 import { accountSchema, type AccountFormData } from '@/schemas/account';
-import { useGetMyAccountQuery, useUpdateProfileMutation } from '@/services/accountApi';
 import { formatPhoneNumberForApi, stripPhonePrefix } from '@/utils/phoneUtils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useEffect } from 'react';

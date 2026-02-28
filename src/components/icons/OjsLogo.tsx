@@ -1,6 +1,6 @@
+import { useThemeColor } from '@/hooks';
 import Svg, { ClipPath, Defs, G, Path, type SvgProps } from "react-native-svg";
 
-import { useThemeColor } from "@/hooks/use-theme-color";
 
 const OjsLogo = (props: SvgProps) => {
     const themeColor = useThemeColor({}, "logo");

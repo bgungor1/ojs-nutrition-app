@@ -1,4 +1,4 @@
-import type { ApiProductCommentsResponse, ApiProductDetailResponse, ApiProductsResponse } from '@/types/api';
+import { type ApiProductCommentsResponse, type ApiProductDetailResponse, type ApiProductsResponse } from '@/types';
 import { baseApi } from './baseApi';
 
 

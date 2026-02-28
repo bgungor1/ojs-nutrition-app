@@ -1,9 +1,4 @@
-import CategoryGrid from '@/components/home/CategoryGrid';
-import HeroBanner from '@/components/home/HeroBanner';
-import HomeHeader from '@/components/home/HomeHeader';
-import ProductGrid from '@/components/home/ProductGrid';
-import PromoBanner from '@/components/home/PromoBanner';
-import SearchBar from '@/components/home/SearchBar';
+import { CategoryGrid, HeroBanner, HomeHeader, ProductGrid, PromoBanner, SearchBar } from '@/components/home';
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { ScrollView, View } from 'react-native';

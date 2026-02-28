@@ -1,5 +1,4 @@
-import { AccountForm } from '@/components/account/AccountForm';
-import { AccountHeader } from '@/components/account/AccountHeader';
+import { AccountForm, AccountHeader } from '@/components/account';
 import { Stack } from 'expo-router';
 import React from 'react';
 import { ScrollView } from 'react-native';

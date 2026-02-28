@@ -1,6 +1,5 @@
-import DiscountBadge from '@/components/common/DiscountBadge';
-import StarRating from '@/components/common/StarRating';
-import type { ApiBestSellerProduct, ApiProduct } from '@/types/api';
+import { type ApiBestSellerProduct, type ApiProduct } from '@/types';
+import { DiscountBadge, StarRating } from '@/components/common';
 import { getImageUrl } from '@/utils/imageUrl';
 import { Image } from 'expo-image';
 import React from 'react';

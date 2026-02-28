@@ -1,4 +1,4 @@
-import { CheckoutFormValues } from '@/types/checkout';
+import { CheckoutFormValues } from '@/types';
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { Control, Controller, Path } from 'react-hook-form';

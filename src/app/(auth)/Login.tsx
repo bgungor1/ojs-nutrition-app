@@ -1,9 +1,7 @@
-import AuthButton from '@/components/auth/AuthButton';
-import AuthInput from '@/components/auth/AuthInput';
-import AuthTabSwitcher from '@/components/auth/AuthTabSwitcher';
-import OjsLogo from '@/components/icons/OjsLogo';
+import { useLoginMutation } from '@/services';
+import { AuthButton, AuthInput, AuthTabSwitcher } from '@/components/auth';
+import { OjsLogo } from '@/components/icons';
 import { loginSchema, type LoginFormData } from '@/schemas/auth';
-import { useLoginMutation } from '@/services/authApi';
 import type { AppDispatch } from '@/store';
 import { setAuth } from '@/store/authSlice';
 import { zodResolver } from '@hookform/resolvers/zod';

@@ -1,6 +1,5 @@
-import { ReviewDistribution } from '@/components/product/ReviewOverview';
-import { ApiComment } from '@/types/api';
-
+import { ReviewDistribution } from '@/components/product';
+import { ApiComment } from '@/types';
 export const aboutPageDistribution: ReviewDistribution[] = [
     { rating: 5, count: 8000, percentage: 80 },
     { rating: 4, count: 1000, percentage: 10 },

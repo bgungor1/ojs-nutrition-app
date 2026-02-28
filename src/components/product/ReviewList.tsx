@@ -1,5 +1,5 @@
-import StarRating from '@/components/common/StarRating';
-import { ApiComment } from '@/types/api';
+import { ApiComment } from '@/types';
+import { StarRating } from '@/components/common';
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { Text, View } from 'react-native';

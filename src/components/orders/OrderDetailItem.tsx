@@ -1,4 +1,4 @@
-import { OrderItem as OrderItemType } from '@/types/order';
+import { OrderItem as OrderItemType } from '@/types';
 import React from 'react';
 import { Image, Text, View } from 'react-native';
 

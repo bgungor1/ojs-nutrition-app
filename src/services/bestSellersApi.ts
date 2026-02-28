@@ -1,4 +1,4 @@
-import type { ApiBestSellerResponse } from '@/types/api'
+import { type ApiBestSellerResponse } from '@/types';
 import { baseApi } from './baseApi'
 
 

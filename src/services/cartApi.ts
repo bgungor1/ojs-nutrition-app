@@ -1,8 +1,4 @@
-import type {
-    AddToCartRequest,
-    CartResponse,
-    RemoveFromCartRequest
-} from '@/types/cart'
+import { type AddToCartRequest, type CartResponse, type RemoveFromCartRequest } from '@/types';
 import { baseApi } from './baseApi'
 
 export const cartApi = baseApi.injectEndpoints({

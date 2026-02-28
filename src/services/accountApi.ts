@@ -1,4 +1,4 @@
-import type { AccountApiResponse, UpdateProfileRequest } from '@/types/account'
+import { type AccountApiResponse, type UpdateProfileRequest } from '@/types';
 import { baseApi } from './baseApi'
 
 export const accountApi = baseApi.injectEndpoints({

@@ -1,5 +1,5 @@
-import { useGetProductsQuery } from '@/services/productsApi'
-import type { ApiProduct } from '@/types/api'
+import { useGetProductsQuery } from '@/services';
+import { type ApiProduct } from '@/types';
 import { useEffect, useMemo, useState } from 'react'
 
 const DEBOUNCE_MS = 300

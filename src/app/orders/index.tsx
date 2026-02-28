@@ -1,4 +1,4 @@
-import { OrderItem } from '@/components/orders/OrderItem';
+import { OrderItem } from '@/components/orders';
 import { mockOrders } from '@/data/orders';
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useRouter } from 'expo-router';

@@ -1,6 +1,6 @@
-import { AccountInput } from '@/components/account/AccountInput';
-import { AddressSelect } from '@/components/address/AddressSelect';
-import { useAddressForm } from '@/hooks/useAddressForm';
+import { AccountInput } from '@/components/account';
+import { AddressSelect } from '@/components/address';
+import { useAddressForm } from '@/hooks';
 import React from 'react';
 import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 

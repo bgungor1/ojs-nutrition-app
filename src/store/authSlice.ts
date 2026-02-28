@@ -1,4 +1,4 @@
-import { User } from "@/types/auth";
+import { User } from '@/types';
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from './index';
 

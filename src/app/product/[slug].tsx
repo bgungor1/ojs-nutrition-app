@@ -1,30 +1,19 @@
+import { AddToCartSection, ProductAccordion, ProductGallery, ProductHeader, ProductInfo, ProductPrice, ProductTrustFeatures, ProductVariants, RelatedProducts, ReviewDistribution, ReviewList, ReviewOverview } from '@/components/product';
+import { useAddToCartMutation, useGetProductBySlugQuery, useGetProductCommentsQuery, useGetProductsQuery } from '@/services';
+import { ApiComment, ApiProduct } from '@/types';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Phase 1 Components
-import { ProductGallery } from '@/components/product/ProductGallery';
-import { ProductHeader } from '@/components/product/ProductHeader';
-import { ProductInfo } from '@/components/product/ProductInfo';
-import { ProductPrice } from '@/components/product/ProductPrice';
 
 // Phase 2 Components
-import { AddToCartSection } from '@/components/product/AddToCartSection';
-import { ProductAccordion } from '@/components/product/ProductAccordion';
-import { ProductTrustFeatures } from '@/components/product/ProductTrustFeatures';
-import { ProductVariants } from '@/components/product/ProductVariants';
 
 // Phase 3 Components
-import { RelatedProducts } from '@/components/product/RelatedProducts';
-import { ReviewList } from '@/components/product/ReviewList';
-import { ReviewDistribution, ReviewOverview } from '@/components/product/ReviewOverview';
 
 // Types and Services
-import { useAddToCartMutation } from '@/services/cartApi';
-import { useGetProductBySlugQuery, useGetProductCommentsQuery, useGetProductsQuery } from '@/services/productsApi';
 import { addItem } from '@/store/cartSlice';
-import { ApiComment, ApiProduct } from '@/types/api';
 import Toast from 'react-native-toast-message';
 import { useDispatch } from 'react-redux';
 

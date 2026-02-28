@@ -1,4 +1,4 @@
-import type { Country, Region, Subregion, WorldListResponse } from '@/types/world';
+import { type Country, type Region, type Subregion, type WorldListResponse } from '@/types';
 import { baseApi } from './baseApi';
 
 interface ApiWrapper<T> {

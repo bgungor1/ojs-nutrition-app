@@ -1,5 +1,5 @@
-import ProductCard from '@/components/home/ProductCard';
-import { ApiProduct } from '@/types/api';
+import { ApiProduct } from '@/types';
+import { ProductCard } from '@/components/home';
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { FlatList, Text, View } from 'react-native';
