@@ -27,7 +27,7 @@
 
 ## ✨ Öne Çıkan Özellikler
 
-- 🍎 Beslenme takibi ve besin değeri hesaplama
+- 🍎  Spor sürecinizi desteklemek için gerekli bileşenler ve  supplementler
 - 🔐 Kimlik doğrulama (Auth flow)
 - 🌙 Otomatik Karanlık / Aydınlık tema desteği
 - 📱 iOS, Android ve Web platformlarında çalışır
